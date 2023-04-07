@@ -1,26 +1,65 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, useState } from 'react'
 import Logo from '../../assets/images/logo.png'
+import './header.css'
 
 const Header: FunctionComponent = () => {
+    const [toggleMenu, setToggleMenu] = useState<boolean>(false)
+
+    const toggleNav = () => {
+        setToggleMenu(!toggleMenu)
+    }
+
     return (
-        <div className="grid grid-cols-2 px-2 md:px-3">
-            <div className="grid grid-cols-2 px-0 md:px-16 items-start">
-                <div className="py-2 flex items-center">
-                    <img src={Logo} className="h-6 w-auto" alt="Logo" />
-                    <div className="font-bold uppercase">EGLISE</div>
+        <div className="header">
+            <div className="designation">
+                <div className="brand">
+                    <img src={Logo} className="brand__logo" alt="Logo" />
+                    <div className="brand__name">EGLISE</div>
                 </div>
-                <div
-                    className="hidden md:block bg-slate-100 h-32 rounded-br-3xl"
-                    style={{ borderBottomRightRadius: '50px' }}
-                ></div>
+                <div className="space-div"></div>
             </div>
-            <div className="py-2">
-                <div className="flex">
-                    <span className="mr-3">Accueil</span>
-                    <span className="mr-3">Blog</span>
-                    <span className="mr-3">A propos</span>
+            <div className="nav">
+                <div className="nav-items">
+                    <span className="nav-items__link nav__link--active nav-items__link--active">
+                        Accueil
+                    </span>
+                    <span className="nav-items__link">Blog</span>
+                    <span className="nav-items__link">A propos</span>
                 </div>
             </div>
+            <div className="nav-toggle-menu">
+                <button
+                    onClick={() => toggleNav()}
+                    className="nav-toggle-menu__btn nav-toggle-menu__btn--open"
+                >
+                    Menu
+                </button>
+            </div>
+
+            {toggleMenu && (
+                <nav className="nav-small-screen">
+                    <div className="text-end">
+                        <button
+                            onClick={() => toggleNav()}
+                            className="nav-toggle-menu__btn nav-toggle-menu__btn--close"
+                        >
+                            Annuler
+                        </button>
+                    </div>
+                    <ul className="nav-small-screen-items">
+                        <li
+                            className="nav-small-screen-items__link 
+                                nav-small-screen-items__link--active nav__link--active"
+                        >
+                            Accueil
+                        </li>
+                        <li className="nav-small-screen-items__link">Blog</li>
+                        <li className="nav-small-screen-items__link">
+                            A propos
+                        </li>
+                    </ul>
+                </nav>
+            )}
         </div>
     )
 }

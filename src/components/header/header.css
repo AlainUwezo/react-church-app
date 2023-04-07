@@ -1,0 +1,118 @@
+.header {
+    @apply grid grid-cols-2 px-2 place-content-center;
+}
+
+.designation {
+    @apply grid grid-cols-2 px-0 items-start;
+}
+
+.brand {
+    @apply py-2 flex items-center;
+}
+
+.brand__logo {
+    @apply h-10 w-auto;
+}
+
+.brand__name {
+    @apply text-xl md:text-sm font-bold uppercase;
+}
+
+.space-div {
+    @apply hidden;
+}
+
+.nav {
+    @apply py-2 hidden;
+}
+
+.nav-toggle-menu {
+    @apply text-end flex justify-end items-center;
+}
+
+.nav-toggle-menu__btn {
+    @apply p-2 rounded-md;
+}
+
+.nav-toggle-menu__btn--open {
+    @apply bg-orange-300;
+}
+
+.nav-toggle-menu__btn--close {
+    @apply bg-black text-white;
+}
+
+.nav-small-screen {
+    @apply fixed bg-white w-full p-3 shadow-md;
+}
+
+.nav-small-screen-items {
+    @apply text-center;
+}
+
+.nav-small-screen-items__link {
+    @apply mb-3;
+}
+
+.nav__link--active {
+    @apply font-semibold;
+}
+
+.nav-small-screen-items__link--active {
+    @apply border-l-4 border-orange-500;
+}
+
+@screen md {
+    .header {
+        @apply px-3 grid-cols-3 mb-5;
+    }
+
+    .designation {
+        @apply px-2;
+    }
+
+    .brand__logo {
+        @apply h-6;
+    }
+
+    .nav {
+        @apply block col-span-2 px-3;
+    }
+
+    .nav-items {
+        @apply flex text-[16px];
+    }
+
+    .nav-items__link {
+        @apply mr-3;
+    }
+
+    .nav-toggle-menu {
+        @apply hidden;
+    }
+
+    .nav-small-screen {
+        @apply hidden;
+    }
+
+    .nav-items__link--active {
+        @apply border-b-2 border-orange-600;
+    }
+}
+
+@screen lg {
+    .header {
+        @apply grid-cols-2 mb-0;
+    }
+    .designation {
+        @apply px-16;
+    }
+
+    .space-div {
+        @apply block h-32 bg-slate-50 rounded-br-3xl ml-[-5px];
+    }
+
+    .nav {
+        @apply block col-span-1;
+    }
+}
