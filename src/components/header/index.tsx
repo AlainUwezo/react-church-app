@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState } from 'react'
 import Logo from '../../assets/images/logo.png'
-import './header.css'
+import './header.scss'
 
 const Header: FunctionComponent = () => {
     const [toggleMenu, setToggleMenu] = useState<boolean>(false)
@@ -32,7 +32,7 @@ const Header: FunctionComponent = () => {
                     onClick={() => toggleNav()}
                     className="nav-toggle-menu__btn nav-toggle-menu__btn--open"
                 >
-                    Menu
+                    <i className="material-icons">menu</i>
                 </button>
             </div>
 
@@ -43,7 +43,7 @@ const Header: FunctionComponent = () => {
                             onClick={() => toggleNav()}
                             className="nav-toggle-menu__btn nav-toggle-menu__btn--close"
                         >
-                            Annuler
+                            <i className="material-icons">close</i>
                         </button>
                     </div>
                     <ul className="nav-small-screen-items">

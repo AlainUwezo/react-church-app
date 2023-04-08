@@ -9,46 +9,39 @@
 
 .footer-logo {
     @apply hidden;
+    &__img {
+        @apply h-16;
+    }
 }
 
-.footer-logo__img {
-    @apply h-16;
-}
-
-.localisation-container {
+.localisation {
     @apply grid-cols-1 text-center mb-5;
+    &__title {
+        @apply font-bold py-2;
+    }
+    &__desc {
+        @apply text-slate-500;
+    }
 }
 
-.localisation__title {
-    @apply font-bold py-2;
-}
-
-.localisation__desc {
-    @apply text-slate-500;
-}
-
-.contact-container {
+.contact {
     @apply grid-cols-1 text-center mb-5;
+    &__title {
+        @apply font-bold py-2;
+    }
+    &__desc {
+        @apply text-slate-500;
+    }
 }
 
-.contact__title {
-    @apply font-bold py-2;
-}
-
-.contact__desc {
-    @apply text-slate-500;
-}
-
-.social-net-container {
+.social-net {
     @apply grid-cols-1 text-center mb-5;
-}
-
-.social-net__title {
-    @apply font-bold py-2;
-}
-
-.social-net__desc {
-    @apply text-slate-500;
+    &__title {
+        @apply font-bold py-2;
+    }
+    &__desc {
+        @apply text-slate-500;
+    }
 }
 
 .social-net-items {

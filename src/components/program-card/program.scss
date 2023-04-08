@@ -1,0 +1,12 @@
+.program-card {
+    @apply py-3;
+    &__day {
+        @apply font-bold font-mono border-l-2 border-orange-500 pl-2;
+    }
+    &__desc {
+        @apply text-slate-700  font-mono;
+    }
+    &__time {
+        @apply text-end font-mono;
+    }
+}

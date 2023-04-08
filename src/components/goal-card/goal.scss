@@ -1,0 +1,16 @@
+.goal-card {
+    @apply flex mb-3;
+    &__img {
+        @apply w-20 h-fit pr-2 rounded-full;
+    }
+}
+
+.goal-content {
+    @apply pt-3;
+    &__title {
+        @apply text-slate-700 font-bold;
+    }
+    &__desc {
+        @apply text-slate-600;
+    }
+}

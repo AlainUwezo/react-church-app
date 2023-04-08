@@ -1,0 +1,174 @@
+.home-container {
+    @apply grid grid-cols-1 py-2;
+}
+
+.main {
+    @apply px-3;
+    &__title {
+        @apply py-5 text-slate-800 text-center font-bold text-[40px] leading-[45px];
+    }
+    &__desc {
+        @apply text-slate-500 text-center;
+    }
+}
+
+.btn-container {
+    @apply px-2 py-3 text-center;
+}
+
+.home-btn {
+    @apply text-white rounded-2xl px-4 py-[.5rem] align-text-top;
+    &--rounded {
+        @apply border-2 border-orange-500 rounded-full px-3 py-2 leading-3;
+    }
+    &--black {
+        @apply bg-gray-800;
+    }
+    &--sky {
+        @apply bg-sky-700;
+    }
+}
+
+.desc-us {
+    @apply order-2 grid py-2;
+}
+
+.pray-container {
+    @apply rounded-tl-3xl rounded-br-3xl;
+}
+
+.pray-card {
+    @apply flex place-content-center;
+    &__img {
+        @apply rounded-tl-3xl rounded-br-3xl px-10;
+    }
+    &__desc {
+        @apply border-b border-b-gray-100 border-l-4 border-slate-50 h-32 pt-7 px-3;
+    }
+}
+
+.goal-container {
+    @apply px-3 bg-slate-100 md:bg-white md:border-r-2 text-black py-5;
+    &__title {
+        @apply font-bold text-center md:text-start;
+    }
+    &__desc {
+        @apply text-slate-500 md:text-gray-800;
+    }
+}
+
+.goal-items {
+    @apply py-2;
+}
+
+.moral-values {
+    @apply flex bg-slate-100 place-content-center pt-10 pb-36 text-white;
+    &__img {
+        @apply w-1/2;
+    }
+}
+
+.profil-card {
+    @apply rounded-full p-2 bg-white;
+}
+
+.profil-card-item {
+    @apply flex place-content-center;
+}
+
+.profil-card-picture {
+    @apply p-2 border-slate-200 border-2 rounded-full;
+    &__img {
+        @apply rounded-full;
+    }
+}
+
+.profil-spacer {
+    @apply grid grid-cols-2 h-20;
+    &__line {
+        @apply border-r-2 border-black h-full;
+    }
+}
+
+.profil {
+    &__title {
+        @apply text-center;
+    }
+    &__designation {
+        @apply font-bold px-2 rounded-t-2xl;
+    }
+    &__desc {
+        @apply text-slate-500 text-center p-4 text-[16px];
+    }
+}
+
+.program-container {
+    @apply hidden;
+    &__title {
+        @apply text-end font-bold text-gray-500;
+    }
+}
+
+.program-small-screen-container {
+    @apply py-10 order-3 px-3;
+    &__title {
+        @apply text-end font-bold text-gray-500;
+    }
+}
+
+@screen md {
+    .home-container {
+        @apply grid-cols-3;
+    }
+    .desc-us {
+        @apply order-1 px-3 grid-cols-1  max-h-[900px] overflow-auto;
+    }
+    .main {
+        @apply col-span-2 pr-16 order-2;
+        &__title {
+            @apply text-start py-0 text-4xl mb-3;
+        }
+        &__desc {
+            @apply text-start;
+        }
+    }
+    .btn-container {
+        @apply text-start;
+    }
+    .pray-card {
+        @apply rounded-tl-3xl;
+        &__img {
+            @apply px-0;
+        }
+        &__desc {
+            @apply bg-black text-white rounded-br-3xl border-l-4 border-black;
+        }
+    }
+    .goal-container {
+        @apply border-r-gray-200 rounded-tr-3xl my-2 py-3;
+    }
+    .moral-values {
+        @apply rounded-tr-3xl bg-orange-300;
+    }
+    .program-container {
+        @apply block py-10 order-3 px-3;
+    }
+    .program-small-screen-container {
+        @apply hidden;
+    }
+}
+
+@screen lg {
+    .home-container {
+        @apply grid-cols-2;
+    }
+    .desc-us {
+        @apply grid-cols-2 px-16  max-h-none overflow-hidden;
+    }
+    .main {
+        @apply col-span-1;
+        &__title {
+            @apply uppercase  text-5xl;
+        }
+    }
+}

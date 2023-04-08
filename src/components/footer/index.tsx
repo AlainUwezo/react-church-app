@@ -1,12 +1,12 @@
 import React, { FunctionComponent } from 'react'
-import './footer.css'
+import './footer.scss'
 import Logo from './../../assets/images/logo.png'
 
 const Footer: FunctionComponent = () => {
     return (
         <div>
             <div className="footer">
-                <div className="localisation-container">
+                <div className="localisation">
                     <div className="footer-logo-small-screen">
                         <img
                             className="footer-logo__img"
@@ -21,7 +21,7 @@ const Footer: FunctionComponent = () => {
                         Nous voous attendons
                     </p>
                 </div>
-                <div className="contact-container">
+                <div className="contact">
                     <div className="footer-logo">
                         <img
                             className="footer-logo__img"
@@ -39,7 +39,7 @@ const Footer: FunctionComponent = () => {
                         <br />
                     </p>
                 </div>
-                <div className="social-net-container">
+                <div className="social-net">
                     <h2 className="social-net__title">Réseaux sociaux</h2>
                     <p className="social-net__desc">
                         Nous sommes également sur les réseaux sociaux.

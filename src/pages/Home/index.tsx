@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import Bonome from './../../assets/images/personne-priant.jpg'
 import Portrait from './../../assets/images/portrait.jfif'
 import Trinity from './../../assets/images/trinity.png'
-import './home.css'
+import './home.scss'
 import { GOALS, PROGRAMS } from '../../models/mock-service'
 import ProgramCard from '../../components/program-card'
 import GoalCard from '../../components/goal-card'
@@ -20,7 +20,7 @@ const Home: FunctionComponent = () => {
                         />
                     </div>
                     <div
-                        className="pray-desc"
+                        className="pray-card__desc"
                         style={{
                             marginTop: '-20px',
                         }}
@@ -66,7 +66,7 @@ const Home: FunctionComponent = () => {
                             <div className="profil-card-picture">
                                 <img
                                     src={Portrait}
-                                    className="profil-card__img"
+                                    className="profil-card-picture__img"
                                     alt="Mon profil"
                                 />
                             </div>
@@ -95,23 +95,24 @@ const Home: FunctionComponent = () => {
 
             <div className="main">
                 <h2 className="main__title">
-                    Dieu, au centre de tout domaine de la vie
+                    <span>Brillant Tendo</span>
+                    <br /> Dieu, au centre de tout domaine de la vie
                 </h2>
                 <p className="main__desc">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Sunt hic optio laudantium voluptas a dicta cumque ut eius,
-                    iusto quae deleniti, ea quisquam quaerat nulla ducimus!
-                    Tempora molestias eum consequatur?
+                    Nous sommes determinés à parler de Dieu et de son fils Jésus
+                    dans le monde entier pour le salut des âmes
                 </p>
                 <div className="btn-container">
                     <button className="home-btn home-btn--black">
                         Savoir plus
                     </button>
                     &nbsp;&nbsp;
-                    <button className="home-btn--rounded">+</button>
+                    <button className="home-btn--rounded">
+                        <i className="material-icons">local_phone</i>
+                    </button>
                     &nbsp;&nbsp;
                     <button className="home-btn home-btn--sky">
-                        événements
+                        Evénements
                     </button>
                 </div>
                 <div className="program-container">

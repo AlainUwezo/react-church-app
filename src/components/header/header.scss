@@ -8,38 +8,39 @@
 
 .brand {
     @apply py-2 flex items-center;
+    &__logo {
+        @apply h-10 w-auto;
+    }
+    &__name {
+        @apply text-xl md:text-sm font-bold uppercase;
+    }
 }
-
-.brand__logo {
-    @apply h-10 w-auto;
-}
-
-.brand__name {
-    @apply text-xl md:text-sm font-bold uppercase;
-}
-
 .space-div {
     @apply hidden;
 }
 
 .nav {
     @apply py-2 hidden;
+    &__link--active {
+        @apply font-semibold;
+    }
 }
 
 .nav-toggle-menu {
     @apply text-end flex justify-end items-center;
-}
-
-.nav-toggle-menu__btn {
-    @apply p-2 rounded-md;
-}
-
-.nav-toggle-menu__btn--open {
-    @apply bg-orange-300;
-}
-
-.nav-toggle-menu__btn--close {
-    @apply bg-black text-white;
+    &__btn {
+        @apply p-2 rounded-md;
+        &--open {
+            @apply flex border;
+        }
+        &--close,
+        &--open {
+            @apply text-gray-700;
+            &:hover {
+                @apply text-black;
+            }
+        }
+    }
 }
 
 .nav-small-screen {
@@ -48,18 +49,12 @@
 
 .nav-small-screen-items {
     @apply text-center;
-}
-
-.nav-small-screen-items__link {
-    @apply mb-3;
-}
-
-.nav__link--active {
-    @apply font-semibold;
-}
-
-.nav-small-screen-items__link--active {
-    @apply border-l-4 border-orange-500;
+    &__link {
+        @apply mb-3;
+        &--active {
+            @apply border-l-4 border-orange-500;
+        }
+    }
 }
 
 @screen md {
@@ -81,10 +76,12 @@
 
     .nav-items {
         @apply flex text-[16px];
-    }
-
-    .nav-items__link {
-        @apply mr-3;
+        &__link {
+            @apply mr-3;
+        }
+        &__link--active {
+            @apply border-b-2 border-orange-600;
+        }
     }
 
     .nav-toggle-menu {
@@ -93,10 +90,6 @@
 
     .nav-small-screen {
         @apply hidden;
-    }
-
-    .nav-items__link--active {
-        @apply border-b-2 border-orange-600;
     }
 }
 
