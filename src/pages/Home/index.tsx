@@ -4,8 +4,8 @@ import Portrait from './../../assets/images/portrait.jfif'
 import Trinity from './../../assets/images/trinity.png'
 import './home.scss'
 import { GOALS, PROGRAMS } from '../../models/mock-service'
-import ProgramCard from '../../components/program-card'
-import GoalCard from '../../components/goal-card'
+import ProgramCard from '../../components/home/program-card'
+import GoalCard from '../../components/home/goal-card'
 
 const Home: FunctionComponent = () => {
     return (

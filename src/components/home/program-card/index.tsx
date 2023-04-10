@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
-import FormatHeure from '../../_helpers/format-heure'
-import { Program } from '../../models/program'
+import FormatHeure from '../../../_helpers/format-heure'
+import { Program } from '../../../models/program'
 import './program.scss'
 
 type Props = {

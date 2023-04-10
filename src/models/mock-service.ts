@@ -1,8 +1,10 @@
 import { Goal } from "./goal";
 import { Program } from "./program";
 import Amour from './../assets/images/love.jfif';
+import Portrait from './../assets/images/portrait.jfif';
 import Foi from './../assets/images/foi.jfif';
 import Esperance from './../assets/images/esperance.jfif';
+import { Article } from "./Article";
 
 export const PROGRAMS: Program[] = [{
     id: 0,
@@ -120,3 +122,47 @@ export const GOALS: Goal[] = [{
     desc: 'Comprendre en quoi nous avons la garantie de la véracité de notre croyqnce.',
     picture: Esperance
 }] 
+
+export const ARTICLES: Article[] = [{
+    id: 0,
+    title: 'Ton Amour',
+    picture: Portrait,
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
+    publishAt: new Date()
+},{
+    id: 1,
+    title: 'Ne fais pas ce que tout le monde fait',
+    picture: Portrait,
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
+    publishAt: new Date()
+},{
+    id: 2,
+    title: 'Le péché tue l\'homme',
+    picture: Portrait,
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
+    publishAt: new Date()
+},{
+    id: 3,
+    title: 'Ton Amour',
+    picture: Portrait,
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
+    publishAt: new Date()
+},{
+    id: 4,
+    title: 'Ton Amour',
+    picture: Portrait,
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
+    publishAt: new Date()
+},{
+    id: 5,
+    title: 'Ton Amour',
+    picture: Portrait,
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
+    publishAt: new Date()
+},{
+    id: 6,
+    title: 'Ton Amour',
+    picture: Portrait,
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
+    publishAt: new Date()
+}]

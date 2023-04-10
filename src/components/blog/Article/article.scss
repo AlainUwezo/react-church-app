@@ -1,0 +1,25 @@
+.article {
+    @apply p-3 shadow-md;
+    &__img {
+        @apply object-contain text-center;
+    }
+    &__title {
+        @apply font-semibold my-2;
+    }
+    &__desc {
+        @apply text-[14px] text-slate-800;
+    }
+}
+
+.article-footer {
+    @apply flex justify-between items-center mt-2 text-[12px];
+    &__comment {
+        @apply flex items-center;
+        &__icon {
+            @apply text-[16px] text-slate-500;
+        }
+    }
+    &__date {
+        @apply text-right text-slate-500 lowercase font-mono italic;
+    }
+}

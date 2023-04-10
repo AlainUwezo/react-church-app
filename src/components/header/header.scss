@@ -12,7 +12,7 @@
         @apply h-10 w-auto;
     }
     &__name {
-        @apply text-xl md:text-sm font-bold uppercase;
+        @apply text-xl font-bold uppercase;
     }
 }
 .space-div {
@@ -66,8 +66,13 @@
         @apply px-2;
     }
 
-    .brand__logo {
-        @apply h-6;
+    .brand {
+        &__logo {
+            @apply h-6;
+        }
+        &__name {
+            @apply text-sm;
+        }
     }
 
     .nav {

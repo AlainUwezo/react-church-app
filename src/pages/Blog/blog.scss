@@ -1,0 +1,43 @@
+.blog {
+    @apply px-5;
+}
+
+.blog-topbar {
+    @apply text-center py-3;
+    &__tag {
+        @apply font-semibold;
+    }
+    &__title {
+        @apply text-[24px] leading-[27px] font-bold;
+    }
+    &__desc {
+        @apply font-thin;
+    }
+}
+
+.article-container {
+    @apply grid grid-cols-1 gap-3 py-5;
+}
+
+@screen md {
+    .blog {
+        @apply px-6;
+    }
+    .blog-topbar {
+        &__title {
+            @apply text-4xl font-bold;
+        }
+    }
+    .article-container {
+        @apply grid grid-cols-2 gap-3 py-5;
+    }
+}
+
+@screen lg {
+    .blog {
+        @apply px-20;
+    }
+    .article-container {
+        @apply grid grid-cols-4 gap-3 py-5;
+    }
+}

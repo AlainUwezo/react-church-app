@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useState } from 'react'
 import Logo from '../../assets/images/logo.png'
 import './header.scss'
+import { Link } from 'react-router-dom'
 
 const Header: FunctionComponent = () => {
     const [toggleMenu, setToggleMenu] = useState<boolean>(false)
@@ -20,10 +21,15 @@ const Header: FunctionComponent = () => {
             </div>
             <div className="nav">
                 <div className="nav-items">
-                    <span className="nav-items__link nav__link--active nav-items__link--active">
+                    <Link
+                        to="/home"
+                        className="nav-items__link nav__link--active nav-items__link--active"
+                    >
                         Accueil
-                    </span>
-                    <span className="nav-items__link">Blog</span>
+                    </Link>
+                    <Link to="/blog" className="nav-items__link">
+                        Blog
+                    </Link>
                     <span className="nav-items__link">A propos</span>
                 </div>
             </div>
