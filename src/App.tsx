@@ -2,7 +2,12 @@ import React, { FunctionComponent } from 'react'
 import Header from './components/header'
 import Home from './pages/Home'
 import Footer from './components/footer'
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import {
+    Navigate,
+    Route,
+    BrowserRouter as Router,
+    Routes,
+} from 'react-router-dom'
 import Blog from './pages/Blog'
 
 const App: FunctionComponent = () => {
@@ -12,7 +17,7 @@ const App: FunctionComponent = () => {
             <Routes>
                 <Route Component={Home} path="/home" />
                 <Route Component={Blog} path="/blog" />
-                <Route Component={Home} path="" />
+                <Route path="/" element={<Navigate to="/home" />} />
             </Routes>
             <Footer />
         </Router>
