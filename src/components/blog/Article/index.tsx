@@ -3,7 +3,7 @@ import { Article } from '../../../models/Article'
 import FormatDate from '../../../_helpers/format-date'
 import TruncateMarkup from 'react-truncate-markup'
 import './article.scss'
-import { Zoom } from 'react-awesome-reveal'
+import { Slide } from 'react-awesome-reveal'
 
 type Props = {
     article: Article
@@ -11,7 +11,7 @@ type Props = {
 
 const ArticleCard: FunctionComponent<Props> = ({ article }) => {
     return (
-        <Zoom>
+        <Slide>
             <div className="article">
                 <img
                     className="article__img"
@@ -41,7 +41,7 @@ const ArticleCard: FunctionComponent<Props> = ({ article }) => {
                     </p>
                 </p>
             </div>
-        </Zoom>
+        </Slide>
     )
 }
 

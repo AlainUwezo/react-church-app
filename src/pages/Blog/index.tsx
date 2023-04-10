@@ -2,7 +2,6 @@ import React, { FunctionComponent } from 'react'
 import './blog.scss'
 import Carousel from '../../components/blog/carousel'
 import { ARTICLES } from '../../models/mock-service'
-import Article from '../../components/blog/Article'
 import ArticleCard from '../../components/blog/Article'
 
 const Blog: FunctionComponent = () => {

@@ -1,5 +1,5 @@
 .article {
-    @apply p-3 shadow-md;
+    @apply p-3 border z-[1];
     &__img {
         @apply object-contain text-center;
     }

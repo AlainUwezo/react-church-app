@@ -1,7 +1,10 @@
+@import "./../../../../color.scss";
+
 .program-card {
     @apply py-3;
     &__day {
-        @apply font-bold font-mono border-l-2 border-orange-500 pl-2;
+        @apply font-bold font-mono border-l-2 pl-2;
+        border-color: $color-primary;
     }
     &__desc {
         @apply text-slate-700  font-mono;

@@ -1,3 +1,5 @@
+@import "./../../../color.scss";
+
 .header {
     @apply grid grid-cols-2 px-2 place-content-center;
 }
@@ -44,7 +46,7 @@
 }
 
 .nav-small-screen {
-    @apply fixed bg-white w-full p-3 shadow-md;
+    @apply fixed bg-white w-full p-3 shadow-md z-[1];
 }
 
 .nav-small-screen-items {
@@ -52,7 +54,8 @@
     &__link {
         @apply mb-3;
         &--active {
-            @apply border-l-4 border-orange-500;
+            @apply border-b-2;
+            border: $color-primary;
         }
     }
 }
@@ -85,7 +88,8 @@
             @apply mr-3;
         }
         &__link--active {
-            @apply border-b-2 border-orange-600;
+            @apply border-b-2;
+            border-color: $color-primary;
         }
     }
 

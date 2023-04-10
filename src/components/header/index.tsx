@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState } from 'react'
 import Logo from '../../assets/images/logo.png'
 import './header.scss'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Header: FunctionComponent = () => {
     const [toggleMenu, setToggleMenu] = useState<boolean>(false)
@@ -21,15 +21,26 @@ const Header: FunctionComponent = () => {
             </div>
             <div className="nav">
                 <div className="nav-items">
-                    <Link
+                    <NavLink
                         to="/home"
-                        className="nav-items__link nav__link--active nav-items__link--active"
+                        className={({ isActive }) =>
+                            isActive
+                                ? 'nav-items__link nav__link--active nav-items__link--active'
+                                : 'nav-items__link'
+                        }
                     >
                         Accueil
-                    </Link>
-                    <Link to="/blog" className="nav-items__link">
+                    </NavLink>
+                    <NavLink
+                        to="/blog"
+                        className={({ isActive }) =>
+                            isActive
+                                ? 'nav-items__link nav__link--active nav-items__link--active'
+                                : 'nav-items__link'
+                        }
+                    >
                         Blog
-                    </Link>
+                    </NavLink>
                     <span className="nav-items__link">A propos</span>
                 </div>
             </div>
@@ -53,13 +64,32 @@ const Header: FunctionComponent = () => {
                         </button>
                     </div>
                     <ul className="nav-small-screen-items">
-                        <li
-                            className="nav-small-screen-items__link 
-                                nav-small-screen-items__link--active nav__link--active"
-                        >
-                            Accueil
+                        <li className="nav-small-screen-items__link">
+                            <NavLink
+                                to="/home"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? 'nav-small-screen-items__link nav-small-screen-items__link--active nav__link--active'
+                                        : ''
+                                }
+                                onClick={() => toggleNav()}
+                            >
+                                Accueil
+                            </NavLink>
                         </li>
-                        <li className="nav-small-screen-items__link">Blog</li>
+                        <li className="nav-small-screen-items__link">
+                            <NavLink
+                                to="/blog"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? 'nav-small-screen-items__link nav-small-screen-items__link--active nav__link--active'
+                                        : ''
+                                }
+                                onClick={() => toggleNav()}
+                            >
+                                Blog
+                            </NavLink>
+                        </li>
                         <li className="nav-small-screen-items__link">
                             A propos
                         </li>
