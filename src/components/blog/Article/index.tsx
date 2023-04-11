@@ -4,15 +4,26 @@ import FormatDate from '../../../_helpers/format-date'
 import TruncateMarkup from 'react-truncate-markup'
 import './article.scss'
 import { Slide } from 'react-awesome-reveal'
+import { Link, useNavigate } from 'react-router-dom'
 
 type Props = {
     article: Article
 }
 
 const ArticleCard: FunctionComponent<Props> = ({ article }) => {
+    const navigate = useNavigate()
+
+    const goToArticleDetail = () => {
+        navigate(`/blog/${article.id}`)
+    }
+
     return (
         <Slide>
-            <div className="article">
+            <div
+                role="button"
+                className="article"
+                onClick={() => goToArticleDetail()}
+            >
                 <img
                     className="article__img"
                     src={article.picture}
@@ -23,7 +34,8 @@ const ArticleCard: FunctionComponent<Props> = ({ article }) => {
                     lines={5}
                     ellipsis={
                         <span>
-                            ...&nbsp;&nbsp;<a href="#">voir plus</a>
+                            ...&nbsp;&nbsp;
+                            <Link to={'/blog/' + article.id}>voir plus</Link>
                         </span>
                     }
                 >

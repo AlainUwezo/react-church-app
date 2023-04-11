@@ -1,0 +1,68 @@
+@import "./color.scss";
+
+.detail-article {
+    @apply md:px-16;
+    &__publish-date {
+        @apply px-3 italic text-slate-500 text-end;
+    }
+}
+.detail-article-brand {
+    @apply flex items-center px-3;
+    &__arrow-back {
+        @apply text-[20px] rounded-full p-2;
+        &:hover {
+            @apply bg-slate-100;
+        }
+    }
+    &__title {
+        @apply p-3 text-[20px] font-[500];
+    }
+}
+
+.detail-article-img-card {
+    @apply h-[200px] md:h-[300px] flex place-content-center;
+    &__picture {
+        @apply object-contain h-[100%];
+    }
+}
+
+.detail-article-desc-card {
+    @apply p-5 md:px-36;
+    &__title {
+        @apply font-semibold border-l-4 mb-3 px-2 border-orange-500;
+    }
+    &__desc {
+        @apply text-center px-2;
+        &__line {
+            @apply py-2;
+        }
+    }
+}
+
+.detail-article-commentaire-card {
+    @apply p-5 md:px-36;
+}
+
+.detail-article-commentaire-title-card {
+    @apply flex justify-between items-center;
+    &__title {
+        @apply font-bold text-slate-500 border-l-4 mb-3 px-2 border-sky-900;
+    }
+    &__nb {
+        @apply border-2 py-1 px-2;
+    }
+}
+
+@screen md {
+    .detail-article-brand {
+        @apply flex items-center px-3;
+        &__arrow-back {
+            &:hover {
+                background: $color-primary;
+            }
+        }
+        &__title {
+            @apply p-3 text-[20px] font-[500];
+        }
+    }
+}

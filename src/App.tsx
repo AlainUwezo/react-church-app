@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import Header from './components/header'
 import Home from './pages/Home'
-import ArticleDetail from './components/blog/article-detail'
 import Footer from './components/footer'
 import {
     Navigate,
@@ -10,17 +9,18 @@ import {
     Routes,
 } from 'react-router-dom'
 import Blog from './pages/Blog'
+import ArticleDetail from './components/blog/article-detail'
 
 const App: FunctionComponent = () => {
     return (
         <Router>
             <Header />
             <Routes>
-                <Route Component={Home} path="/home" />
-                <Route Component={Blog} path="/blog" />
+                <Route path="/home" Component={Home} />
+                <Route path="/blog" Component={Blog} />
+                <Route path="blog/:id" Component={ArticleDetail} />
                 <Route path="/" element={<Navigate to="/home" />} />
             </Routes>
-            {/* <ArticleDetail /> */}
             <Footer />
         </Router>
     )

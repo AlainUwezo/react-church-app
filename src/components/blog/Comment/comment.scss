@@ -1,0 +1,13 @@
+.article-comments {
+    @apply pl-5 py-3 border-b;
+}
+
+.comment-card {
+    @apply grid grid-flow-col;
+    &__publisher {
+        @apply font-mono align-top mr-1 font-bold;
+    }
+    &__publish-date {
+        @apply text-end text-slate-500;
+    }
+}

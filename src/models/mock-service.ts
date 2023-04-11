@@ -5,6 +5,7 @@ import Portrait from './../assets/images/portrait.jfif';
 import Foi from './../assets/images/foi.jfif';
 import Esperance from './../assets/images/esperance.jfif';
 import { Article } from "./Article";
+import { Comment } from "./comment";
 
 export const PROGRAMS: Program[] = [{
     id: 0,
@@ -121,48 +122,67 @@ export const GOALS: Goal[] = [{
     title: 'Espérance',
     desc: 'Comprendre en quoi nous avons la garantie de la véracité de notre croyqnce.',
     picture: Esperance
+}]
+
+const COMMENTAIRES: Comment[] = [{
+    id: 0,
+    comment: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed illo veritatis accusamus officia! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed illo veritatis accusamus officia!',
+    publishAt: new Date(),
+    publisher: 'Alain Uwezo'
+},{
+    id: 1,
+    comment: 'C\'est tellement cool que n\'importe quel article',
+    publishAt: new Date(),
+    publisher: 'Arlon Baraka'
 }] 
 
 export const ARTICLES: Article[] = [{
     id: 0,
     title: 'Ton Amour',
     picture: Portrait,
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
-    publishAt: new Date()
+    desc: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!'],
+    publishAt: new Date(),
+    comments: COMMENTAIRES
 },{
     id: 1,
     title: 'Ne fais pas ce que tout le monde fait',
     picture: Portrait,
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
-    publishAt: new Date()
+    desc: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!'],
+    publishAt: new Date(),
+    comments: [COMMENTAIRES[0]]
 },{
     id: 2,
     title: 'Le péché tue l\'homme',
     picture: Portrait,
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
-    publishAt: new Date()
+    desc: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!'],
+    publishAt: new Date(),
+    comments: COMMENTAIRES
 },{
     id: 3,
     title: 'Ton Amour',
     picture: Portrait,
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
-    publishAt: new Date()
+    desc: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!'],
+    publishAt: new Date(),
+    comments: COMMENTAIRES
 },{
     id: 4,
     title: 'Ton Amour',
     picture: Portrait,
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
-    publishAt: new Date()
+    desc: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!'],
+    publishAt: new Date(),
+    comments: COMMENTAIRES
 },{
     id: 5,
     title: 'Ton Amour',
     picture: Portrait,
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
-    publishAt: new Date()
+    desc: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!'],
+    publishAt: new Date(),
+    comments: COMMENTAIRES
 },{
     id: 6,
     title: 'Ton Amour',
     picture: Portrait,
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!',
-    publishAt: new Date()
+    desc: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi quod eius fugiat ratione eligendi maiores non minima corporis necessitatibus totam maxime aspernatur cum, itaque doloribus. Voluptatum, explicabo! Ratione, repellat!'],
+    publishAt: new Date(),
+    comments: COMMENTAIRES
 }]
