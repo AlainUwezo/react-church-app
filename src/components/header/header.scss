@@ -1,5 +1,11 @@
 @import "./../../../color.scss";
 
+@mixin active-link {
+    @apply font-semibold;
+    @apply border-b-2;
+    border-bottom-color: $color-primary;
+}
+
 .header {
     @apply grid grid-cols-2 px-2 place-content-center;
 }
@@ -24,7 +30,7 @@
 .nav {
     @apply py-2 hidden;
     &__link--active {
-        @apply font-semibold;
+        @include active-link();
     }
 }
 
@@ -46,7 +52,7 @@
 }
 
 .nav-small-screen {
-    @apply fixed bg-white w-full p-3 shadow-md z-[1];
+    @apply fixed left-0 bg-white w-full p-3 shadow-md z-[1];
 }
 
 .nav-small-screen-items {
@@ -54,8 +60,7 @@
     &__link {
         @apply mb-3;
         &--active {
-            @apply border-b-2;
-            border: $color-primary;
+            @include active-link();
         }
     }
 }
